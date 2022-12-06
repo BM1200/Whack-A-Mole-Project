@@ -1,0 +1,125 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOL3.MainPage">
+    <Grid x:Name="OverallContentGrid">
+        <Image Source="background2.png" Opacity="0.5"/>
+        <StackLayout>
+            <VerticalStackLayout Spacing="25"
+                                 Padding="30, 0"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+                <Label x:Name="Title" FontSize="Medium"
+                       FontFamily="TimesNewRoman"
+                       FontAttributes="Bold" Text="WELCOME TO WHACK-A-MOLEMAN" 
+                       Margin="4"/>
+                <Label x:Name="LblCounter" Text="0"
+                       TextColor="White"
+                       FontSize="Medium" FontAttributes="Bold"
+                       Margin="3"/>
+                <Button x:Name="Timer" Text="Start"
+                        Clicked="Timer_Clicked"
+                        TextColor="Green"
+                        HorizontalOptions="Center" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+            <Label x:Name="LblScore" Text="0"
+                   FontAttributes="Bold" 
+                   FontSize="Large"/>
+            <Grid x:Name="GameGrid3x3" IsVisible="True" IsEnabled="True" HeightRequest="300"
+              WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center"
+              >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="mole2.png"
+                             x:Name="Mole1"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         HorizontalOptions="Center" VerticalOptions="Center"
+                         HeightRequest="60" WidthRequest="60"
+                             Clicked="ImageButton_Clicked"/>
+
+                <!--<BoxView>
+                    --><!--HeightRequest="100" WidthRequest="100"
+                     CornerRadius="50"
+                     Color="Green" Grid.Row="0" Grid.Column="1"
+                     HorizontalOptions="Center" VerticalOptions="Center">--><!--
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                          NumberOfTapsRequired="1"/>
+                    </BoxView.GestureRecognizers>
+
+                </BoxView>
+                <BoxView>
+                    --><!--HeightRequest="100"
+                     WidthRequest="100"
+                     CornerRadius="50"
+                     Color="Red" Grid.Row="1"
+                     Grid.Column="1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"--><!--
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                          NumberOfTapsRequired="1"/>
+                    </BoxView.GestureRecognizers>
+                </BoxView>-->
+            </Grid>
+            <Grid x:Name="GameGrid5x5" IsVisible="False" IsEnabled="False" HeightRequest="300"
+              WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center"
+             >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="mole2.png" x:Name="Mole2"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         HorizontalOptions="Center" VerticalOptions="Center"
+                         HeightRequest="40" WidthRequest="40"
+                             Clicked="ImageButton_Clicked"/>
+                <!--<BoxView>
+                    --><!--HeightRequest="100" WidthRequest="100"
+                     CornerRadius="50"
+                     Color="Green" Grid.Row="0" Grid.Column="1"
+                     HorizontalOptions="Center" VerticalOptions="Center">--><!--
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                          NumberOfTapsRequired="1"/>
+                    </BoxView.GestureRecognizers>
+
+                </BoxView>-->
+            </Grid>
+            <Button x:Name="BtnTimer" Text="Move"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="5"
+                    Clicked="BtnTimer_Clicked"/>
+            <Button x:Name="BtnChangeGrid" Text="5x5"
+                HorizontalOptions="Center" Margin="5"
+                Clicked="BtnChangeGrid_Clicked" />
+            
+
+
+        </StackLayout>
+
+    </Grid>
+
+
+</ContentPage>
